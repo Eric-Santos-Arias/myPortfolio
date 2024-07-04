@@ -1,0 +1,92 @@
+---
+import TypeText from "../components/TypeText";
+import Layout from "../layouts/Layout.astro";
+import {introduction,profile,work,education, skills} from "@/JSON/InfoCv.json"
+---
+
+<Layout title="Eric Santos">
+	<main>
+		<div class="md:w-[38%] mt-10 w-[100%] mx-auto font-mono text-sm">
+			<div class="md:flex md:flex-row-reverse justify-between items-center">
+				<img
+					class="hidden sm:inline-block w-28 rounded-2xl ml-4"
+					src="https://avatars.githubusercontent.com/u/95249774?v=4"
+					alt=""
+					srcset=""
+				/>
+				<div class="p-4">
+					<h1 class="text-2xl font-extrabold md:font-semibold">{introduction.name}</h1>
+					<p class="w-[100%] md:w-[70%]">
+						{introduction.selfintroduction}
+					</p>
+					<div class="h-[15px]">
+						<strong><TypeText client:load/></strong>
+					</div>
+					<ul class="p-2">
+						<li class="inline p-2">:)</li>
+						<li class="inline p-2">***</li>
+						<li class="inline p-2">***</li>
+					</ul>
+				</div>
+			</div>
+
+			<section class="p-4">
+				<h2 class="text-xl font-semibold">About</h2>
+				<p>
+					{profile.about}
+				</p>
+			</section>
+			<section class="p-4">
+
+				<h2 class="text-xl font-semibold">Work Experience</h2>
+				{
+					work.map((item)=>{
+						return(
+							<div class="mb-3">
+								<p><strong>{item.name}</strong> <spam class="ml-1 p-1 bg-slate-200 rounded-md">On site</spam></p> 
+								<p>{item.position} <strong class="ml-10">{item.startDate} - {item.endDate}</strong></p> 
+							</div>
+						)
+					})
+				}
+			</section>
+			<section class="p-4">
+				<h2 class="text-xl font-semibold">Education</h2>
+				{education.map((item)=>{
+					return(
+						<div class="mb-3">
+							<p><strong>{item.name}</strong></p>
+							<p class="text-sm">{item.diplom}  <strong class={(item.endDate == "In process"? "ml-4 p-1 font-normal bg-slate-200 rounded-md": "ml-12" ) }>{item.endDate}</strong></p>
+						</div>
+					)
+				})}
+			</section>
+			<section class="p-4">
+				<h2 class="text-xl font-bold">Skill</h2>
+				<ul class="mt-2 text-[13px] flex flex-wrap">
+				{skills.map((item)=>{
+					return(
+						<li class="mt-5 md:mt-5 mr-4 p-1 rounded-md bg-gray-700 text-white">
+							{item}
+						</li>
+					)
+				})}
+				</ul>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	p{
+		color: rgb(103, 105, 107);
+	}
+	section{
+		width: 90%;
+	}
+</style>

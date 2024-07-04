@@ -1,0 +1,38 @@
+{
+    "introduction":{
+        "name": "Eric Santos",
+        "selfintroduction": "I am a dedicated and enthusiastic software developer with a strong foundation in programming principles. Proficient in various languages and frameworks, I am committed to continuous learning and growth. I am eager to apply my skills and contribute effectively"
+    },
+    "profile":{
+        "about": "I am an enthusiastic individual who enjoys programming as a hobby, constantly exploring new technologies and honing my skills. I have knowledge in various job roles, which has given me a well-rounded perspective and adaptability. In my free time, I love playing football, which keeps me active and enhances my teamwork abilities. I look forward to leveraging my diverse experiences and passion for technology in future opportunities."
+    },
+    "work":[
+        {
+            "name": "Epa",
+            "position": "Customer Service",
+            "startDate": 2018,
+            "endDate": 2022,
+            "summary": "I have extensive experience working in a hardware store, where I provided exceptional customer service and detailed information about various tools and equipment. My role involved assisting customers in selecting the right tools for their projects, offering expert advice on usage, maintenance, and safety. I developed a deep understanding of a wide range of hardware products and took pride in ensuring customers left the store well-informed and satisfied with their purchases."
+        },
+        {
+            "name": "Teleperformance",
+            "position": "Tecnical Support and Billing",
+            "startDate": 2022,
+            "endDate": 2024,
+            "summary": "I have extensive experience working in a hardware store, where I provided exceptional customer service and detailed information about various tools and equipment. My role involved assisting customers in selecting the right tools for their projects, offering expert advice on usage, maintenance, and safety. I developed a deep understanding of a wide range of hardware products and took pride in ensuring customers left the store well-informed and satisfied with their purchases."
+        }
+    ],
+    "education": [
+        {
+            "name": "Liceo Tecnico Integral",
+            "diplom": "Bachelor",
+            "endDate": 2014
+        },
+        {
+            "name": "University Mariano Galvez",
+            "diplom": "Computer's science",
+            "endDate": "In process"
+        }
+    ],
+    "skills": ["JavaScript", "React", "NextJS", "Node.js", "Python", "PostgreSql"]
+}
