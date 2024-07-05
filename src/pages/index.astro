@@ -1,5 +1,4 @@
 ---
-import TypeText from "../components/TypeText";
 import Layout from "../layouts/Layout.astro";
 import Git from "@/icons/GitHub.astro"
 import Mail from "@/icons/Mail.astro"
@@ -11,8 +10,8 @@ import {introduction,profile,work,education, skills} from "@/JSON/InfoCv.json"
 
 <Layout title="Eric Santos">
 	<main>
-		<div class="md:w-[38%] mt-4 md:mt-10 w-[100%] mx-auto font-mono text-sm">
-			<div class="md:flex md:flex-row-reverse justify-between items-center">
+		<div class=" lg:w-[60%] xl:w-[38%] mt-4 lg:mt-10 w-[100%] mx-auto font-mono text-sm">
+			<div class="lg:flex lg:flex-row-reverse justify-between items-center">
 				<img
 					class="hidden sm:inline-block w-28 rounded-2xl ml-4"
 					src="https://avatars.githubusercontent.com/u/95249774?v=4"
@@ -21,7 +20,7 @@ import {introduction,profile,work,education, skills} from "@/JSON/InfoCv.json"
 				/>
 				<div class="p-4">
 					<h1 class="text-2xl font-extrabold md:font-semibold">{introduction.name}</h1>
-					<p class="w-[100%] md:w-[70%]">
+					<p class="w-[100%] lg:w-[70%]">
 						{introduction.selfintroduction}
 					</p>
 				
