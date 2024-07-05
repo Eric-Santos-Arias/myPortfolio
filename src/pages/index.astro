@@ -1,12 +1,17 @@
 ---
 import TypeText from "../components/TypeText";
 import Layout from "../layouts/Layout.astro";
+import Git from "@/icons/GitHub.astro"
+import Mail from "@/icons/Mail.astro"
+import Phone from "@/icons/Phone.astro"
+
+
 import {introduction,profile,work,education, skills} from "@/JSON/InfoCv.json"
 ---
 
 <Layout title="Eric Santos">
 	<main>
-		<div class="md:w-[38%] mt-10 w-[100%] mx-auto font-mono text-sm">
+		<div class="md:w-[38%] mt-4 md:mt-10 w-[100%] mx-auto font-mono text-sm">
 			<div class="md:flex md:flex-row-reverse justify-between items-center">
 				<img
 					class="hidden sm:inline-block w-28 rounded-2xl ml-4"
@@ -19,14 +24,12 @@ import {introduction,profile,work,education, skills} from "@/JSON/InfoCv.json"
 					<p class="w-[100%] md:w-[70%]">
 						{introduction.selfintroduction}
 					</p>
-					<div class="h-[15px]">
-						<strong><TypeText client:load/></strong>
+				
+					<div class="flex mt-4">
+						<a class="mr-4"><Git/></a>
+						<a class="mr-4"><Mail/</a>>
+						<a class=""><Phone/</a>>
 					</div>
-					<ul class="p-2">
-						<li class="inline p-2">:)</li>
-						<li class="inline p-2">***</li>
-						<li class="inline p-2">***</li>
-					</ul>
 				</div>
 			</div>
 
