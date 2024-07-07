@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Git from "@/icons/GitHub.astro"
 import Mail from "@/icons/Mail.astro"
 import Phone from "@/icons/Phone.astro"
+import WorldMap from "@/icons/WorldMap.astro"
 
 
 import {introduction,profile,work,education, skills} from "@/JSON/InfoCv.json"
@@ -23,10 +24,13 @@ import {introduction,profile,work,education, skills} from "@/JSON/InfoCv.json"
 					<p class="w-[100%] lg:w-[70%]">
 						{introduction.selfintroduction}
 					</p>
-				
-					<div class="flex mt-4">
+					<div class="print">
+						 <WorldMap/>
+						 <p> <strong>esarias.com</strong> </p>
+					</div>
+					<div class="icons-show flex mt-4">
 						<a class="mr-4 border-2 p-1 rounded-md text-gray-500 hover:text-gray-800 hover:bg-gray-100" href="https://github.com/Eric-Santos-Arias" target="_blank" ><Git/></a>
-						<a class="mr-4 border-2 p-1 rounded-md text-gray-500 hover:text-gray-800 hover:bg-gray-100"><Mail/</a>>
+						<a class="mr-4 border-2 p-1 rounded-md text-gray-500 hover:text-gray-800 hover:bg-gray-100" href="mailto:ericmiu07@gmail.com"><Mail/</a>>
 						<a class="border-2 p-1 rounded-md text-gray-500 hover:text-gray-800 hover:bg-gray-100"><Phone/></a>
 					</div>
 				</div>
@@ -45,7 +49,7 @@ import {introduction,profile,work,education, skills} from "@/JSON/InfoCv.json"
 					work.map((item)=>{
 						return(
 							<div class="mb-3">
-								<p><strong>{item.name}</strong> <spam class="ml-1 p-1 bg-slate-200 rounded-md">On site</spam></p> 
+								<p><strong>{item.name}</strong> <spam class="ml-1 p-1 bg-slate-200 rounded-md print:ml-1 print:p-1 print:bg-slate-200 print:rounded-md">On site</spam></p> 
 								<p>{item.position} <strong class="ml-10">{item.startDate} - {item.endDate}</strong></p> 
 							</div>
 						)
@@ -68,7 +72,7 @@ import {introduction,profile,work,education, skills} from "@/JSON/InfoCv.json"
 				<ul class="mt-2 text-[13px] flex flex-wrap">
 				{skills.map((item)=>{
 					return(
-						<li class="mt-5 md:mt-5 mr-4 p-1 rounded-md bg-gray-700 text-white">
+						<li class="mt-5 md:mt-5 mr-4 p-1 rounded-md bg-gray-700 text-white print:bg-gray-700 print:text-white">
 							{item}
 						</li>
 					)
@@ -80,6 +84,7 @@ import {introduction,profile,work,education, skills} from "@/JSON/InfoCv.json"
 </Layout>
 
 <style is:global>
+	
 	* {
 		margin: 0;
 		padding: 0;
@@ -91,4 +96,19 @@ import {introduction,profile,work,education, skills} from "@/JSON/InfoCv.json"
 	section{
 		width: 90%;
 	}
+	.print{display: none;}
+
+	@media print{
+		.print{
+			width: 110px;
+			justify-content: space-between;
+			display: flex;
+			align-items: center;
+
+		}
+		.icons-show{
+			display: none;
+		}
+	}
+	
 </style>
